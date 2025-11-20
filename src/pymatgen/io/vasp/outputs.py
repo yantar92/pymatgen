@@ -2270,7 +2270,7 @@ class Outcar:
             n
             for [n] in self.read_table_pattern(
                 r"\n{3}-{104}\n{3}",
-                r".+plane waves:\s+(\*{6,}|\d+)",
+                r"\S[^\n]+plane waves:\s+(\*{6,}|\d+)",
                 (
                     r"maximum number of plane-waves"
                     if serial_compilation
